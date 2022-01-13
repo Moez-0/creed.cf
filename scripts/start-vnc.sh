@@ -7,7 +7,7 @@ do
     if [ $? -eq 0 ]; then
         break
     fi
-    echo "Waiting for Xvfb..."
+    echo "Waiting for Xvfb.."
 done
 
 x11vnc -forever -shared -rfbport ${VNC_PORT:-5900} -rfbportv6 ${VNC_PORT:-5900} -display ${DISPLAY}
